@@ -1,14 +1,16 @@
 
 package yomy;
 
+import yomy.*;
+
 class Yomy {
 
     public static void main(String[] args){
         
         Story s = new Story();
+        Tools t = new Tools();
         s.A();
-
-        // init Stories
+        s.B();
 
     } 
 }

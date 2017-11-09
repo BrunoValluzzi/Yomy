@@ -5,35 +5,67 @@ import java.util.*;
 import java.io.*;
 
 class Story {
-
-
-    public static void A(){
     
-    // BufferedReader in  = new BufferedReader(new FileReader("file.bruno"));
-    // 
-    String txt = "";
-        String[] a1 = {
-            "[ 1 ] Entri nella locanda",
-            "[ 2 ] Lasci perdere la locanda e continui il tuo percorso verso un luogo più familiare" };
-        String[] a2 = {"meth_1()","meth_2()"};
+    public static Tools t = new Tools();
 
-        System.out.println(txt);
-
-        for (int i = 0; i < a1.length; i++){
+        public static void A(){
             
-            System.out.println(a1[i]); //String[]
-            }
-        System.out.println("\n");
-        Scanner input = new Scanner(System.in);
+            t.creaTesto("Inizio.txt");
+            
+            String[] a1 = {
+                "[ 1 ] Entri nella locanda",
+                "[ 2 ] Lasci perdere la locanda e continui il tuo percorso verso un luogo più familiare" };
         
-        int answer =  input.nextInt();
-        System.out.println(answer);
+            System.out.println(t.creaTesto("Inizio.txt"));
+            System.out.println("\n");
 
-        System.out.print("\n\n" + answer + "\n");
-    
-    
-    
-    
+            for (int i = 0; i < a1.length; i++){
+                System.out.println(a1[i]); //String[]
+            }
+            
+            System.out.println("\n");
+            Scanner input = new Scanner(System.in);
+            int answer =  input.nextInt();
+            //SSystem.out.println(answer);
+            //System.out.print("\n\n" + answer + "\n"); 
+
+            switch(answer){
+                case 1: 
+                    if (answer == 1) {B();} break;
+                case 2: 
+                    if (answer == 2) {A();} break;
+                default: 
+                    System.out.println(""); 
+                    break;
+            }
+        
     }
+        public static void B(){
+            //scrivi un altro metodo con un altro passaggio della storia
+            t.creaTesto("entri nella locanda.txt");
+             String[] a1 = {
+                "[ 1 ] Gli rispondi sgarbatamente",
+                "[ 2 ] Fai finta di niente e continui a sorseggiare il tuo drink" };
+        
+            System.out.println(t.creaTesto("entri nella locanda.txt"));
+            System.out.println("\n");
 
+            for (int i = 0; i < a1.length; i++){
+                System.out.println(a1[i]);
+            }
+            
+            System.out.println("\n");
+            Scanner input = new Scanner(System.in);
+            int answer =  input.nextInt();
+
+            switch(answer){
+                case 1: 
+                    if (answer == 1) {B();} break;
+                case 2: 
+                    if (answer == 2) {A();} break;
+                default: 
+                    System.out.println(""); 
+                    break;
+            }
+        }
 }
