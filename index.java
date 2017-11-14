@@ -11,6 +11,10 @@ class Yomy {
         Tools t = new Tools();
         s.A();
         s.B();
-
+        s.C();
+        s.D();
+        s.E();
+        s.F();
+        s.H();
     } 
 }

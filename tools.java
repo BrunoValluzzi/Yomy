@@ -14,8 +14,6 @@ class Tools {
             List<String> a = new ArrayList<String>(); 
             String s;
             while ((s = in.readLine()) != null){
-                /* String f = new String(s, "UTF-8");
-                System.out.println(f); */
                 a.add(s);
             }
             String r = String.join("\n", a);
@@ -26,5 +24,13 @@ class Tools {
             System.out.println("none");
         }
         return "";
+ }
+ public static int inputUtente(){
+
+     System.out.println("\n");
+            Scanner input = new Scanner(System.in);
+            int answer =  input.nextInt();
+            return answer;
+
  }
 }
